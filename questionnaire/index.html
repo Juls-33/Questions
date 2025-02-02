@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Elizabeth Sky Jean</title>
+    <link rel="icon" href="img/ps/received_4025226127705672.jpeg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Courgette", serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url(img/v1013-p-0009a.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            transition: background-image 1s ease-in-out;
+        }
+        main {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        header {
+            background-color: rgb(254, 207, 215);
+            margin: 1rem;
+            padding: 0 2rem;
+            border-radius: 10px;
+            border: solid 5px rgba(79, 172, 249, 0.6);
+            animation: fadeIn 1s;
+        }
+        #main-page {
+            background-color: rgba(235, 254, 254, 0.5);
+            border-radius: 20px;
+            width: 40vw;
+            min-height: 75vh;
+            padding: 1rem;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        #main-page .final-gif{
+            height: 30vh;
+        }
+        .button {
+            background-color: rgb(249, 194, 255);
+            padding: 1rem;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .button:active {
+            transform: scale(0.95);
+        }
+        .buttonNega {
+            background-color: rgb(246, 130, 159);
+        }
+        .styled-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .styled-input:focus {
+            border-color: rgb(246, 130, 159);
+            box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+            outline: none;
+        }
+        img {
+            animation: bounce 1s infinite alternate;
+        }
+        .valentines{
+            font-size: 2rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-2px); }
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" autoplay loop>
+        <source src="audio/playful.mp3" type="audio/mpeg">
+    </audio>
+    <main>
+        <header><h1>Good day Miss Elizabeth Sky Jean! This is an Interview from the NBI</h1></header> 
+        <div id="main-page">
+            <h1>Hi there babycakes 😁😁😁</h1>
+            <br>
+            <img src="img/cute-cat-cat-cute.gif" alt="pussy">
+            <br><br>
+            <button class="button" onclick="firstPage()">Hello there my baby boy</button>
+        </div>
+        
+    </main>
+    <script>
+        function changeMusic(src) {
+            var music = document.getElementById("bg-music");
+            music.src = src;
+            music.play();
+        }
+        function firstPage(){
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>How are you?</h1>
+            <img src="img/uwu-cute.gif" alt="uwu"><br>
+            <button class="button" onclick="nextPage2a()">I am good</button>
+            <br><br>
+            <button class="button buttonNega"onclick="nextPage2b()">I'm not fine I need lambing :(((</button>
+            `;
+        }
+        function nextPage2a(){
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>Hehehehe nice mukhang di na need ng kiss ko ah</h1>
+            <br>
+            <h1>I have a question, 1 is 1+1=?</h1>
+            <input type="text" id="ques1" class="styled-input">
+            <button class="button"type="submit" onclick="checkMessage()">Submit</button>
+            `
+        }
+        function nextPage2b(){
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>Aw that's so unfortunate, halika dito kiss kita</h1>
+            <br><br>
+            <h1>I have a question, 1 is 1+1=?</h1>
+            <input type="text" id="ques1" class="styled-input">
+            <button class="button" type="submit" onclick="checkMessage()">Submit</button>
+            ` 
+        }
+        function checkMessage() {
+            console.log("hi");
+            var ques1 = document.getElementById("ques1").value;
+            if (ques1.toLowerCase() === "bintana" || ques1.toLowerCase()==="window") {
+                console.log("galing galing naman");
+                nextPage3a();
+            }
+            else{
+                console.log("mali");
+                nextPage3b();
+            }
+        }
+        function nextPage3a(){
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>Galing galing namannn, you're so cultured</h1>
+            <img src="img/clapping-leonardo-dicaprio.gif" alt="bravo">
+            ` 
+            setTimeout(nextPage4, 5000);
+        }
+        function nextPage3b(){
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>Luh mali, bintana ang sagot... Parang di nag-aral</h1>
+            <img src="img/29ddc970ce44c92f9796b0e08830955c.gif" alt="windows">
+            ` 
+            setTimeout(nextPage4, 5000);
+        }
+        function nextPage4(){
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>Okay I have another question.</h1>
+            <img src="img/bills-ugh.gif" alt="pussy typing">
+            <h1>In 1000 sentences, how is your MedTech life?</h1>
+            <input type="text" id="ques1" class="styled-input">
+            <button type="submit" class="button">Submit</button>
+            `   
+            setTimeout(nextPage5, 10000);
+        }
+        function nextPage5() {
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>Joke lang tama na ayoko napapagod ka...</h1>
+            <img src="img/200.gif" alt="patrick">
+            <h1>Eto na talaga ang tanonggg.</h1>
+            <h1>READY???</h1>
+            <button class="button" type="submit" onclick="nextPage6()">Yes</button>
+            <button class="button buttonNega" type="submit" onclick="nextPage5a()">No</button>
+            `   
+        }
+        function nextPage5a() {
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>LUH DAPAT READY KA!!</h1>
+            <h1>ULIT!</h1>
+            <img src="img/angry-cat-sour-cat.gif" alt="madCat">
+            <h1>Eto na talaga ang tanonggg.</h1>
+            <h1>READY???</h1>
+            <button class="button" type="submit" onclick="nextPage6()">Yes</button>
+            <button class="button buttonNega" type="submit" onclick="nextPage5a()">No</button>
+            `   
+        }
+        function nextPage6() {
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>ARE YOU SURE?? PARANG DI NAMAN</h1>
+            <img src="img/rock-one-eyebrow-raised-rock-staring.gif" alt="the rockkkkk"><br><br>
+            <button class="button" type="submit" onclick="nextPage7()">loh ready na nga</button>
+            <br><br>
+            <button class="button buttonNega" type="submit" onclick="nextPage5a()">Wag nalang ayaw mo eh</button>
+            `   
+        }
+        function nextPage7() {
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML = `
+            <h1>DEJOKE ETO NA</h1>
+            <h1>IN</h1>
+            `   
+            setTimeout(count3, 1000);
+        }
+        function count3() {
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML += `<h1>3</h1>`;
+            setTimeout(count2, 1000);
+        } function count2() {
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML += `<h1>2</h1>`;
+            setTimeout(count1, 1000);
+        } function count1() {
+            var mainPage = document.getElementById("main-page");
+            mainPage.innerHTML += `<h1>1</h1>`;
+            setTimeout(valentines, 1000);
+        }
+        function valentines() {
+            changeMusic('audio/Aphrodite.mp3');
+            var mainPage = document.getElementById("main-page");
+            document.body.style.backgroundImage ="url('img/Artboard1.png')";
+            document.querySelector("header").innerHTML = `<h1>🙏🙏PLEASE ACCEPT MY DATE INVITATION🙏🙏</h1>`;
+            mainPage.style.width = "80vw";
+            mainPage.innerHTML = `
+            <h1 class="valentines">WILL YOU BE MY VALENTINES DATE? <br>🥺👉👈 <br>UwU</h1>
+            <img class="final-gif" src="img/c7b4eeafa61e128b448971354aa9b099.gif" alt="cute cat">
+            <img class="final-gif" src="img/c91f7811fccd4cb9c6f9b3f16613fc08.gif" alt="cute cat">
+            <br><br>
+            <button class="button" type="submit" onclick="success()">YESSS PLEASEEE</button>
+            <button class="button buttonNega" onclick="alert('Deleting system 32...')" type="submit">YOKO NGA</button>
+            ` 
+        }
+        function success() {
+            var mainPage = document.getElementById("main-page");
+            document.querySelector("header").innerHTML = `<h1>😸😸YEHEY I AM HAPPY😸😸</h1>`;
+            mainPage.innerHTML = `
+            <h1 class="valentines">YEHEYYY I LOVE YOU BEBE QQQQ</h1>
+            <img class="final-gif" src="img/giphy.gif" alt="mwaps">
+            <img class="final-gif" src="img/kiss.gif" alt="kiss">
+            <img class="final-gif" src="img/200w.gif" alt="kiss">
+            <h1  class="valentines">매우 감사합니다!!!</h1>
+            ` 
+        }
+
+    </script>
+</body>
+</html>
